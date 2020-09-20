@@ -1,0 +1,1 @@
+﻿ping 8.8.8.8 -t | ForEach {"{0} - {1}" -f ((Invoke-WebRequest ifconfig.me/ip).Content),$_} | ForEach {"{0} - {1}" -f (Get-Date),$_} > C:\temp\PingResults.txt
